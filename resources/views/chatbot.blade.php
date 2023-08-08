@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
 </head>
 <body>
+<audio id="myAudio">
+  <source src="{{URL::asset('audio/chatSound.mp4')}}"  type="audio/mp4">
+  Your browser does not support the audio element.
+</audio>
 <section class="msger">
   <header class="msger-header">
+  <img src="../../../image/load.gif" hidden id="image" name="photo" width="60" height="50"/>
     <div class="msger-header-title">
-      <i class="fas fa-comment-alt"></i> SimpleChat
+      <i class="fas fa-comment-alt"></i> 
     </div>
     <div class="msger-header-options">
       <span><i class="fas fa-cog"></i></span>
     </div>
   </header>
-
   <main class="msger-chat">
     <div class="msg left-msg">
       <div
        class="msg-img"
-       style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+       style="background-image: url(../../../image/download.png)"
       ></div>
 
       <div class="msg-bubble">

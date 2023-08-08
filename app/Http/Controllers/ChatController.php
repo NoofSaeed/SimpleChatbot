@@ -18,9 +18,6 @@ class ChatController extends Controller
     public function message($text)
     {
         $chatbot= chatbot::where('queries', 'like', '%' . $text . '%')->first();
-       // return response()->json([$chatbot]);
-       //return response()->json(['replies' =>  $chatbot]);
-
         $replies=$chatbot!=null?$chatbot->replies:"Sorry can't be able to understand you!";
         return response()->json(['replies' => $replies]);
     }
